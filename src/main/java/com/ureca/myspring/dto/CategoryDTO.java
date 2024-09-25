@@ -1,8 +1,5 @@
 package com.ureca.myspring.dto;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,10 +13,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="region")
-public class RegionDTO {
+@Table(name="category")
+public class CategoryDTO {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;  
-    private String zone;
-    private String city;
+    private Long id;    
+    private String name;
+}
