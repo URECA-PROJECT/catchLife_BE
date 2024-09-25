@@ -20,7 +20,6 @@ import lombok.NoArgsConstructor;
 public class RegionDTO {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;          
+    private Long id;  
     private String zone;
     private String city;
-}
