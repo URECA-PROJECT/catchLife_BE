@@ -35,29 +35,5 @@ public class RegionController {
     @GetMapping("/cities")
     public List<String> listCities(@RequestParam(value = "zone") String zone) {
         return regionService.listCities(zone);
-    }	
-    
-    // 요청된 city의 모든 district 조회
-    @GetMapping("/district")
-    public List<String> listDistrict(@RequestParam(value = "city") String city) {
-        return regionService.listDistrictToCity(city);
-    }
-    
-    // 요청된 district의 모든 neighborhood 조회
-    @GetMapping("/neighborhood")
-    public List<String> listNeighborhood(@RequestParam(value = "district") String district) {
-        return regionService.listNeighborhoodToDistrict(district);
-    }
-    
-    // zone > district
-    @GetMapping("/districtToZone")	
-    public List<String> listDistrictToZone(@RequestParam(value = "zone") String zone) {
-        return regionService.listDistrictToZone(zone);
-    }
-    
-    // city > neighborhood
-    @GetMapping("/neighborhoodToCity")
-    public List<String> listNeighborhoodToCity(@RequestParam(value = "city") String city) {
-        return regionService.listNeighborhoodToCity(city);
     }
 }

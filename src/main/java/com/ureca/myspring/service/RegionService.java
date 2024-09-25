@@ -26,25 +26,4 @@ public class RegionService {
 	public List<String> listCities(String zone) {
 	    return regionRepository.findDistinctCity(zone);
 	}
-	
-	// 모든 district 조회 (city > district)
-	public List<String> listDistrictToCity(String city) {
-	    return regionRepository.findDistinctDistrictByCity(city);
-	}
-
-	// 모든 neighborhood 조회 (district > neighborhood)
-	public List<String> listNeighborhoodToDistrict(String district) {
-	    return regionRepository.findDistinctNeighborhoodByDistrict(district);
-	}
-
-	// 모든 district 조회 (zone > district)
-	public List<String> listDistrictToZone(String zone) {
-	    return regionRepository.findDistinctDistrictByZone(zone);
-	}
-
-	// 모든 neighborhood 조회 (city > neighborhood)
-	public List<String> listNeighborhoodToCity(String city) {
-	    return regionRepository.findDistinctNeighborhoodByCity(city);
-	}
-
 }
