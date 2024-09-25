@@ -26,5 +26,3 @@ public class RegionDTO {
     private String district;           // 구/군
     private String neighborhood;           // 동/읍/면/리
 }
-
-// 브랜치 test
